@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás & Erika - 16.10.2026</title>
+
+    <!-- Tipografías estilo Fixdate -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- MÚSICA DE FONDO -->
+<audio id="bg-music" src="home.mp3" loop></audio>
+<div class="music-toggle" id="music-toggle">
+    <span id="music-icon">▶</span>
+</div>
+
+<!-- HERO -->
+<header class="hero fade-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <p class="hero-label">Nuestra boda</p>
+        <h1 class="names">Tomás & Erika</h1>
+        <p class="date">16 · Octubre · 2026</p>
+        <p class="hero-sub">Con mucho amor, queremos invitarte a nuestro día.</p>
+        <div class="hero-scroll">Deslizá para ver más</div>
+    </div>
+</header>
+
+<!-- CUENTA REGRESIVA -->
+<section class="section fade-section" id="countdown-section">
+    <h2>Falta muy poco</h2>
+    <p class="section-sub">Contamos los días para celebrar con vos</p>
+    <div id="countdown" class="countdown"></div>
+</section>
+
+<!-- FRASE -->
+<section class="section section-soft fade-section">
+    <p class="phrase">"El hogar está donde estamos juntos."</p>
+</section>
+
+<!-- HISTORIA -->
+<section class="section fade-section" id="story">
+    <h2>Nuestra historia</h2>
+    <p class="section-sub">Un camino compartido, paso a paso, hasta este gran día.</p>
+    <p class="section-text">
+        Después de tantos momentos, risas, viajes y desafíos, decidimos dar el siguiente paso.
+        Queremos que seas parte de este día tan especial, rodeados de naturaleza, familia y amigos.
+    </p>
+</section>
+
+<!-- GALERÍA -->
+<section class="section fade-section" id="gallery">
+    <h2>Momentos</h2>
+    <p class="section-sub">Algunos recuerdos de nuestro camino juntos</p>
+    <div class="slider">
+        <div class="slide"><img src="fotos/foto1.jpg" alt="Foto 1"></div>
+        <div class="slide"><img src="fotos/foto2.jpg" alt="Foto 2"></div>
+        <div class="slide"><img src="fotos/foto3.jpg" alt="Foto 3"></div>
+    </div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="section section-soft fade-section" id="dresscode">
+    <h2>Dress code</h2>
+    <p class="section-sub">Inspirado en el bosque</p>
+    <p class="section-text">
+        Elegante · Formal. Colores tierra, verdes, beige, marrones y tonos naturales.
+    </p>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="section fade-section" id="location">
+    <h2>Ceremonia & fiesta</h2>
+    <p class="section-sub">Todo en un mismo lugar, rodeados de naturaleza</p>
+    <div class="location-block">
+        <p class="location-name">Salón: Quinta Casa de Campo Olavarría</p>
+        <p class="location-address">Av. las Orquideas 3750</p>
+    </div>
+
+    <iframe 
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26730.570640159625!2d-60.2947642652651!3d-36.916204810081545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959447bb4c07042f%3A0xd732e5b43997bc63!2sQuinta%20Casa%20de%20Campo%20Olavarr%C3%ADa!5e1!3m2!1ses-419!2sar!4v1779045261492!5m2!1ses-419!2sar"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+
+    <a class="btn primary" href="https://maps.google.com" target="_blank">Cómo llegar</a>
+</section>
+
+<!-- REGALO -->
+<section class="section section-soft fade-section" id="gift">
+    <h2>Regalo</h2>
+    <p class="section-sub">Tu presencia es lo más importante</p>
+    <p class="section-text">
+        Si deseas regalarnos algo, recuerda que no importa el valor sino la intención 💛 <p>Y si no sabes qué regalarnos, pero aun así quieres hacernos un presente, te dejamos nuestro </p>
+    </p>
+    <p class="alias">alias: ERIKA.TOMAS.GALICIA</p>
+</section>
+
+<!-- RSVP -->
+<section class="section fade-section" id="rsvp">
+    <h2>Confirmar asistencia</h2>
+    <p class="section-sub">Ayudanos a organizar este día especial</p>
+    <form action="https://formspree.io/f/xxxxxxx" method="POST" class="rsvp-form">
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+        <input type="number" name="acompanantes" placeholder="Cantidad de acompañantes" min="0" required>
+        <select name="menu">
+            <option value="">Preferencia de menú (opcional)</option>
+            <option value="tradicional">Tradicional</option>
+            <option value="vegetariano">Vegetariano</option>
+            <option value="celiaco">Sin TACC</option>
+        </select>
+        <textarea name="mensaje" placeholder="Mensaje opcional (alergias, comentarios, etc.)"></textarea>
+        <button type="submit" class="btn primary">Confirmar asistencia</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>Tomás & Erika · 16 · 10 · 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
