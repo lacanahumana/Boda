@@ -63,19 +63,28 @@ const icon = document.getElementById("music-icon");
 let isPlaying = true;
 
 // Por políticas de los navegadores, el audio se inicia al primer click
-toggle.addEventListener("click", () => {
+function startMusic() {
     if (!isPlaying) {
         audio.play().then(() => {
             isPlaying = true;
             toggle.classList.add("playing");
             icon.textContent = "⏸";
-        }).catch(() => {
-            // Si falla el autoplay, no hacemos nada
         });
-    } else {
+    }
+}
+
+// Primer toque en cualquier parte de la pantalla
+document.addEventListener("click", startMusic, { once: true });
+
+// Botón de música
+toggle.addEventListener("click", () => {
+    if (isPlaying) {
         audio.pause();
         isPlaying = false;
         toggle.classList.remove("playing");
         icon.textContent = "▶";
+    } else {
+        startMusic();
     }
 });
+
