@@ -60,7 +60,7 @@ window.addEventListener("load", handleScroll);
 const audio = document.getElementById("bg-music");
 const toggle = document.getElementById("music-toggle");
 const icon = document.getElementById("music-icon");
-let isPlaying = true;
+let isPlaying = false;
 
 // Por políticas de los navegadores, el audio se inicia al primer click
 function startMusic() {
