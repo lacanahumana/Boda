@@ -151,6 +151,7 @@ h2 {
 
 /* GALERÍA */
 
+/* --- SLIDER ORIGINAL (MÓVILES) --- */
 .slider {
     display: flex;
     overflow-x: auto;
@@ -166,9 +167,41 @@ h2 {
 
 .slide img {
     width: 100%;
+    height: 90%;
     border-radius: 16px;
+    object-fit: cover;
     display: block;
 }
+
+/* --- VISTA PC (PANTALLAS GRANDES) --- */
+@media (min-width: 900px) {
+
+    /* Convertimos el slider en galería */
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        overflow: visible; /* importante para que no corte imágenes */
+        padding: 0;
+    }
+
+    /* Cada slide deja de comportarse como carrusel */
+    .slide {
+        flex: unset;
+        scroll-snap-align: unset;
+    }
+
+    /* Imágenes más chicas y verticales */
+    .slide img {
+        height: 320px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+}
+
+
+
 
 /* UBICACIÓN */
 
@@ -371,4 +404,38 @@ h2 {
 
 .btn.secondary:hover {
     background: var(--green-dark);
+}
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0 20px;
+}
+
+.color-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    border: 2px solid rgba(0,0,0,0.15);
+}
+
+.inspiration-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.inspiration-gallery img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.inspiration-gallery img:hover {
+    transform: scale(1.05);
 }

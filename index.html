@@ -24,7 +24,7 @@
     <div class="hero-content">
         <p class="hero-label">Nuestra boda</p>
         <h1 class="names">Tomás & Erika</h1>
-        <p class="date">16 · Octubre · 2026</p>
+        <p class="date">17 · Octubre · 2026</p>
         <p class="hero-sub">Con mucho amor, queremos invitarte a nuestro día.</p>
         <div class="hero-scroll">Deslizá para ver más</div>
     </div>
@@ -57,9 +57,11 @@
     <h2>Momentos</h2>
     <p class="section-sub">Algunos recuerdos de nuestro camino juntos</p>
     <div class="slider">
-        <div class="slide"><img src="fotos/Foto_1.jpeg" alt="Foto 1"></div>
+        <div class="slide"><img src="fotos/Foto_1.png" alt="Foto 1"></div>
         <div class="slide"><img src="fotos/Foto_2.jpeg" alt="Foto 2"></div>
         <div class="slide"><img src="fotos/Foto_3.jpeg" alt="Foto 3"></div>
+		<div class="slide"><img src="fotos/Foto_4.jpeg" alt="Foto 4"></div>
+		<div class="slide"><img src="fotos/Foto_5.jpg" alt="Foto 5"></div>
     </div>
 </section>
 
@@ -68,9 +70,19 @@
     <h2>Dress code</h2>
     <p class="section-sub">Inspirado en el bosque</p>
     <p class="section-text">
-        Elegante · Formal. Colores tierra, verdes, beige, marrones y tonos naturales.
+        Semi Formal. 
     </p>
-
+	<p>
+		Nos encantaría que puedan incorporar alguno de los colores 
+		propuestos para acompañar la ambientación natural del evento.
+	</p>
+	<div class="color-palette">
+		<div class="color-box" style="background-color: #936A4C;"></div>
+		<div class="color-box" style="background-color: #CAA07A;"></div>
+		<div class="color-box" style="background-color: #80916D;"></div>
+		<div class="color-box" style="background-color: #6E7C58;"></div>
+	</div>
+	<p></p>
     <button class="btn secondary" id="open-dresscode">Ver más</button>
 </section>
 
@@ -100,9 +112,9 @@
     <h2>Regalo</h2>
     <p class="section-sub">Tu presencia es lo más importante</p>
     <p class="section-text">
-        Si deseas regalarnos algo, recuerda que no importa el valor sino la intención 💛 <p>Y si no sabes qué regalarnos, pero aun así quieres hacernos un presente, te dejamos nuestro </p>
+        Si deseas regalarnos algo, recuerda que no importa el valor sino la intención 💛 <p>Y si no sabes qué regalarnos, pero aun así quieres hacernos un presente, te dejamos nuestro alias:</p>
     </p>
-    <p class="alias">alias: ERIKA.TOMAS.GALICIA</p>
+    <p class="alias">ERIKA.TOMAS.GALICIA</p>
 </section>
 
 <!-- RSVP -->
@@ -127,11 +139,9 @@
 </section>
 
 <footer class="footer">
-    <p>Tomás & Erika · 16 · 10 · 2026</p>
+    <p>Tomás & Erika · 17 · 10 · 2026</p>
 </footer>
 
-<script src="script.js"></script>
-    
 <!-- Pop up Dress code -->
 <div id="dresscode-modal" class="modal">
     <div class="modal-content">
@@ -139,16 +149,18 @@
 
         <h2>Dress Code</h2>
         <p class="modal-text">
-            Nos encantaría que el estilo acompañe la temática del bosque 🌿  
-            Aquí algunas ideas de colores y estilos que combinan perfecto:
+            Aquí algunas ideas de colores y estilos que combinan perfecto🌿:
         </p>
 
         <ul class="modal-list">
-            <li>Verde bosque, verde oliva, verde musgo</li>
-            <li>Marrón, beige, arena, crema</li>
-            <li>Dorado suave o champagne</li>
-            <li>Vestimenta elegante · formal</li>
-            <li>Evitar colores muy brillantes o neón</li>
+            <div class="inspiration-gallery">
+				<img src="fotos/inspiracion1.jpg" alt="Outfit femenino semi formal">
+				<img src="fotos/inspiracion2.jpg" alt="Outfit masculino semi formal">
+				<img src="fotos/inspiracion3.jpg" alt="Outfit en tonos tierra">
+				<img src="fotos/inspiracion4.jpg" alt="Outfit en tonos tierra">
+
+			</div>
+
         </ul>
 
         <p class="modal-text">
@@ -157,5 +169,7 @@
     </div>
 </div>
 
+<script src="script.js"></script>
+    
 </body>
 </html>
