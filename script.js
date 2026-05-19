@@ -88,3 +88,21 @@ toggle.addEventListener("click", () => {
     }
 });
 
+// MODAL DRESS CODE
+const modal = document.getElementById("dresscode-modal");
+const openBtn = document.getElementById("open-dresscode");
+const closeBtn = document.getElementById("close-dresscode");
+
+openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
