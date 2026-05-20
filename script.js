@@ -106,3 +106,22 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+// MODAL musica
+const modal2 = document.getElementById("recomendacion-modal");
+const openBtn2 = document.getElementById("open-recomendacion");
+const closeBtn2 = document.getElementById("close-recomendacion");
+
+openBtn2.addEventListener("click", () => {
+    modal2.style.display = "flex";
+});
+
+closeBtn2.addEventListener("click", () => {
+    modal2.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal2.style.display = "none";
+    }
+});

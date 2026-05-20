@@ -87,9 +87,7 @@ body {
     text-align: center;
 }
 
-.section-soft {
-    background: var(--green-soft);
-}
+
 
 h2 {
     font-family: 'Playfair Display', serif;
@@ -99,7 +97,7 @@ h2 {
 
 .section-sub {
     font-size: 0.95rem;
-    color: var(--text-soft);
+    color: var(--text);
     margin-bottom: 20px;
 }
 
@@ -373,13 +371,25 @@ h2 {
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
+/* Asegura que el cuadro blanco sea el contenedor de referencia */
+.modal-content {
+    position: relative;
+}
+
+/* Posición correcta de la cruz dentro del cuadro */
 .close-modal {
     position: absolute;
-    top: 18px;
-    right: 24px;
+    top: 12px;
+    right: 16px;
     font-size: 1.6rem;
     cursor: pointer;
     color: var(--green-dark);
+    z-index: 10;
+}
+.close-modal:hover {
+    transform: scale(1.15);
+    color: var(--brown);
+    transition: 0.2s ease;
 }
 
 .modal-text {
@@ -396,15 +406,25 @@ h2 {
     line-height: 1.6;
 }
 
-/* Botón secundario */
-.btn.secondary {
+/* Botón secundario 1 y 2*/
+.btn.secondary1 {
     background: var(--brown);
     color: var(--white);
 }
 
-.btn.secondary:hover {
-    background: var(--green-dark);
+.btn.secondary1:hover {
+    background: var(--green);
 }
+
+.btn.secondary2 {
+    background: var(--brown);
+    color: var(--white);
+}
+
+.btn.secondary2:hover {
+    background: var(--green);
+}
+
 .color-palette {
     display: flex;
     justify-content: center;
@@ -438,4 +458,88 @@ h2 {
 
 .inspiration-gallery img:hover {
     transform: scale(1.05);
+}
+
+.section-soft {
+    background: url('fotos/Seccion1.jpg') center/cover no-repeat;
+}
+
+.section-soft2 {
+    background: url('fotos/Seccion3.jpg') center/cover no-repeat;
+}
+
+/* Contenedor de Dress Code + Música */
+.dual-sections {
+	background: url('fotos/Seccion2.jpg');
+	 background-size: cover;       /* se expande sin repetirse */
+    background-position: center;  /* centrado */
+    background-repeat: no-repeat; /* evita repetición */
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden; /* une visualmente las cajas */
+}
+
+/* PC: dos columnas */
+@media (min-width: 900px) {
+    .dual-sections {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Igualar alturas internas */
+.dual-sections .section {
+    margin: 0;
+    border-radius: 0; /* sin bordes internos */
+    padding: 24px;
+}
+
+/* Fondo igual para ambas */
+.dual-sections .section-soft {
+    background: transparent !important;
+}
+
+/* Bordes externos redondeados */
+.dual-sections .section:first-child {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.dual-sections .section:last-child {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/* En teléfono: bordes ajustados */
+@media (max-width: 899px) {
+    .dual-sections .section:first-child {
+        border-radius: 16px 16px 0 0;
+    }
+    .dual-sections .section:last-child {
+        border-radius: 0 0 16px 16px;
+    }
+}
+
+/* Botón alineado abajo */
+.dual-sections .section .btn {
+    margin-top: auto;
+}
+.music-icon {
+    font-size: 32px;
+    text-align: center;
+    margin: 10px 0 20px;
+    animation: bounce 1.6s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-6px); opacity: 0.8; }
+}
+
+.dual-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--green-dark);
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por confirmar</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green-dark: #1f3b2c;
+            --green: #345c3f;
+            --green-soft: #e4efe7;
+            --brown: #7a5a3a;
+            --brown-soft: #f3ebe2;
+            --text-main: #2f2f2f;
+            --text-soft: #666;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: var(--green-soft);
+            color: var(--text-main);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: var(--green-dark);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-soft);
+            max-width: 500px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            background: var(--green);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 999px;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--green-dark);
+        }
+
+        /* Animación suave */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards ease-out;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fade-in">
+        <h1>¡Gracias por la recomendacion!</h1>
+        <p>
+            Tu cancion fue registrada correctamente.  
+            Estamos muy felices de que seas parte de este día tan especial.
+        </p>
+
+        <a href="/index.html" class="btn">Volver a la invitación</a>
+    </div>
+</body>
+</html>

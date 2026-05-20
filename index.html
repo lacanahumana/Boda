@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomás & Erika - 16.10.2026</title>
+    <title>Tomás & Erika - 17.10.2026</title>
 
     <!-- Tipografías estilo Fixdate -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
     <h2>Nuestra historia</h2>
     <p class="section-sub">Un camino compartido, paso a paso, hasta este gran día.</p>
     <p class="section-text">
-        Después de tantos momentos, risas, viajes y desafíos, decidimos dar el siguiente paso.
-        Queremos que seas parte de este día tan especial, rodeados de naturaleza, familia y amigos.
+        Lo que empezó como un encuentro se convirtió en un camino compartido.
+		Ahora queremos celebrar este paso rodeados de quienes hacen nuestra vida más luminosa.
     </p>
 </section>
 
@@ -65,27 +65,45 @@
     </div>
 </section>
 
-<!-- DRESS CODE -->
-<section class="section section-soft fade-section" id="dresscode">
-    <h2>Dress code</h2>
-    <p class="section-sub">Inspirado en el bosque</p>
-    <p class="section-text">
-        Semi Formal. 
-    </p>
-	<p>
-		Nos encantaría que puedan incorporar alguno de los colores 
-		propuestos para acompañar la ambientación natural del evento.
-	</p>
-	<div class="color-palette">
-		<div class="color-box" style="background-color: #936A4C;"></div>
-		<div class="color-box" style="background-color: #CAA07A;"></div>
-		<div class="color-box" style="background-color: #80916D;"></div>
-		<div class="color-box" style="background-color: #6E7C58;"></div>
-	</div>
-	<p></p>
-    <button class="btn secondary" id="open-dresscode">Ver más</button>
-</section>
+<!-- CONTENEDOR DE DOS COLUMNAS -->
+<h2 class="dual-title">Preparativos para el gran día</h2>
+<div class="dual-sections">
+	<!-- DRESS CODE -->
+	<section class="section section-soft fade-section" id="dresscode">
+		<h2>Dress code</h2>
+		<p class="section-sub">Inspirado en el bosque</p>
+		<p class="section-text">
+			Semi Formal. 
+		</p>
+		<p>
+			Nos encantaría que puedan incorporar alguno de los colores 
+			propuestos para acompañar la ambientación natural de la boda.
+		</p>
+		<div class="color-palette">
+			<div class="color-box" style="background-color: #936A4C;"></div>
+			<div class="color-box" style="background-color: #CAA07A;"></div>
+			<div class="color-box" style="background-color: #80916D;"></div>
+			<div class="color-box" style="background-color: #6E7C58;"></div>
+		</div>
+		<p></p>
+		<button class="btn secondary1" id="open-dresscode">Ver más</button>
+	</section>
 
+	<!-- Cancion -->
+	<section class="section section-soft fade-section" id="recomendacion">
+		<h2>Música</h2>
+		<p class="section-sub">Recomendanos música</p>
+
+		<p>Nos encantaría que puedan recomendar alguna canción para la boda.</p>
+		<p> </p>
+		<!-- Ícono animado -->
+		<div class="music-icon">
+			🎵
+		</div>
+		<p> </p>
+		<button class="btn secondary2" id="open-recomendacion">Recomendar</button>
+	</section>
+</div>
 
 <!-- UBICACIÓN -->
 <section class="section fade-section" id="location">
@@ -108,7 +126,7 @@
 </section>
 
 <!-- REGALO -->
-<section class="section section-soft fade-section" id="gift">
+<section class="section section-soft2 fade-section" id="gift">
     <h2>Regalo</h2>
     <p class="section-sub">Tu presencia es lo más importante</p>
     <p class="section-text">
@@ -166,6 +184,30 @@
         <p class="modal-text">
             No es obligatorio — solo una guía para que todo combine con la ambientación natural del evento.
         </p>
+    </div>
+</div>
+
+<!-- Pop up Musica -->
+<div id="recomendacion-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="close-recomendacion">&times;</span>
+		
+		<h2>Recomendar musica</h2>
+		<p class="modal-text">Ayudanos a organizar este día especial</p>
+		<p class="modal-text">
+            No es obligatorio — solo es una opcion para sumar al evento.
+        </p>
+		<form name="Musica" method="POST" class="rsvp-form" data-netlify="true" action="success_music.html">
+			<input type="hidden" name="form-name" value="Musica">
+
+			<input type="text" name="nombre-cancion" placeholder="Nombre de la cancion" required>
+			<input type="text" name="nombre-artista" placeholder="Nombre del artista" required>
+
+			<textarea name="mensaje" placeholder="Mensaje opcional (consideracion, link, etc.)"></textarea>
+			<button type="submit" class="btn secondary">Recomendar</button>
+		</form>
+		
+        
     </div>
 </div>
 
